@@ -1,8 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import i18n from 'i18next';
+
 
 const Blocks = () => {
   const { t } = useTranslation();
+
+  const lang = i18n.language
+
 
   return (
     <>
@@ -94,7 +99,7 @@ const Blocks = () => {
           <h1 className="text-2xl my-8 w-full text-[#7fc4e3]">
             {t("block4h")}
           </h1>
-          <p className="sm:text-sm">{t("block4p")}</p>
+          <p className={lang === "az" ? "sm:text-sm mt-16" : "sm:text-sm"}>{t("block4p")}</p>
         </div>
       </div>
     </>

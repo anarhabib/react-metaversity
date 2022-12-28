@@ -8,7 +8,7 @@ const Triangle = () => {
 
   return (
     <>
-      <div className="container lg:px-16 p-4 mx-auto mt-20 relative -z-10">
+      <div className="container lg:px-16 p-4 mx-auto mt-20 relative -z-10 ">
         <div className="flex justify-between items-center py-4">
           <div className="w-full xl:w-[50%]">
             <h1 className="text-4xl leading-16 lg:text-3xl font-bold text-[#371d6a]">

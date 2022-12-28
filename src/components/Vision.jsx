@@ -59,7 +59,7 @@ const Vision = () => {
 
   return (
     <>
-      <div className="container mx-auto p-4 py-16 lg:px-16  h-full flex justify-center items-center -z-10">
+      <div className="container mx-auto p-4 py-16 lg:px-16  h-full flex justify-center items-center -z-10 overflow-x-hidden">
         <div className="w-full 2xl:w-[50%]">
           <h1 className="font-bold text-5xl text-[#371d6a] leading-[68px]">
           {t("visionh")}
@@ -206,7 +206,7 @@ const Vision = () => {
         <div className="2xl:w-[50%] hidden 2xl:flex items-center justify-center">
           <img
             style={{ rotate: `${rotationDeg}deg` }}
-            className="2xl:w-[490px]  "
+            className="2xl:w-[590px]  "
             src={triangle}
             alt="triangle"
           />
