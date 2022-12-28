@@ -6,7 +6,7 @@ const Blocks = () => {
 
   return (
     <>
-      <div className="container lg:px-16 mx-auto w-[100%] h-full flex-wrap md:flex sm:flex lg:flex justify-center items-center my-8 gap-8">
+      <div className="container p-4 lg:px-16 mx-auto w-[100%] h-full flex-wrap md:flex sm:flex lg:flex justify-center items-center my-8 gap-8">
         <div className="relative w-[100%] lg:w-[45%] xl:w-[22%] md:w-[45%] sm:w-[45%] lg:h-[650px] h-[570px] shadow-lg cursor-pointer lg:hover:scale-[1.01] transition-all  xl:rounded-tl-[25%] md:rounded-tl-[25%] rounded-tl-[25%] rounded-tr-[25%] lg:rounded-[25px] md:rounded-[25px] sm:rounded-[25px] flex-column items-center justify-center bg-white p-8 text-center">
           <div className="flex justify-center items-center">
             <div className="flex items-center justify-center after:content-[*] h-[170px] w-[170px] rounded-full  bg-gradient-to-r from-[#000048b3] to-[#711dfb] bg-bigger animate-wiggle">

@@ -20,7 +20,7 @@ const Navbar = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate()
-  
+
   const scrollTarget = (target) => scroller.scrollTo(target, {smooth: true, duration: 700 ,offset: -180});
 
   const scrollToPage = async (target) => {
@@ -122,13 +122,13 @@ const Navbar = () => {
                 <div className="absolute bottom-[-50px] left-0 after:content-[*] w-full h-[3px] bg-[#1361a7] pointer-events-none group-hover:pointer-events-auto z-10 opacity-0 group-hover:opacity-100 transition duration-700"></div>
                 <div className="absolute top-[23px] bg-transparent p-4 pt-12 pointer-events-none group-hover:pointer-events-auto opacity-0 group-hover:opacity-100  transition duration-700">
                   <Link to="web3">
-                    <h4 className="bg-white p-4 pt-8 ">{t("web3dr1")}</h4>
+                    <h4 className="bg-white p-8 pt-8 text-center rounded-t-xl">{t("web3dr1")}</h4>
                   </Link>
                   <Link to="usedfor">
-                    <h4 className="bg-white p-4">{t("web3dr2")}</h4>
+                    <h4 className="bg-white p-8 text-center">{t("web3dr2")}</h4>
                   </Link>
                   <Link to="metaverse">
-                    <h4 className="bg-white p-4">Metaverse</h4>
+                    <h4 className="bg-white p-8 px-16 rounded-b-xl">Metaverse</h4>
                   </Link>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const Navbar = () => {
                 <div className="absolute bottom-[-50px] left-0 after:content-[*] w-full h-[3px] pointer-events-none group-hover:pointer-events-auto bg-[#1361a7] z-10 opacity-0 group-hover:opacity-100 transition duration-700"></div>
                 <div className="absolute top-[23px] bg-transparent p-4 pt-12 pointer-events-none group-hover:pointer-events-auto  opacity-0 group-hover:opacity-100  transition duration-700">
                   <Link to="acep">
-                    <h4 className="bg-white p-4 pt-8 ">A.C.E.P</h4>
+                    <h4 className="bg-white p-4 pt-8 px-16 pb-8 rounded-xl">A.C.E.P</h4>
                   </Link>
                 </div>
               </div>
