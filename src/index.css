@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  font-family: "Poppins-medium" !important;
+  background: #e0e8ef;
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('./assets/fonts/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-black';
+  src: url('./assets/fonts/Poppins/Poppins-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-medium';
+  src: url('./assets/fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
