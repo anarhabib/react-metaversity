@@ -61,7 +61,7 @@ const Vision = () => {
     <>
       <div className="container mx-auto p-4 py-16 lg:px-16  h-full flex justify-center items-center -z-10 overflow-x-hidden">
         <div className="w-full 2xl:w-[50%]">
-          <h1 className="font-bold text-5xl text-[#371d6a] leading-[68px]">
+          <h1 className="font-bold lg:text-5xl text-3xl text-[#371d6a] leading-[45px]">
           {t("visionh")}
           </h1>
           <h2 className="mt-12 text-xl font-light">

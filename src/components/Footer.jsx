@@ -42,7 +42,7 @@ const scrollToPage = async (target) => {
       <div className="bg-white flex justify-between items-center -z-10">
         <div className="container mx-auto  lg:px-16 pt-20 w-full h-full flex-column lg:flex items-center justify-center lg:justify-between relative pb-24">
         
-          <div className="w-full lg:w-[30%] flex justify-start items-center">
+          <div className="w-full lg:w-[30%] flex justify-center lg:justify-start items-center">
               <Link to="/">
                 <img className="w-[250px] mt-4 p-0" src={logo} alt="/" />
               </Link>
