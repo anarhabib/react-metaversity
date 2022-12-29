@@ -11,7 +11,7 @@ const Triangle = () => {
       <div className="container lg:px-16 p-4  mx-auto mt-20 relative -z-10 ">
         <div className="flex justify-between items-center py-4">
           <div className="w-full xl:w-[50%]">
-            <h1 className="text-3xl leading-16 lg:text-3xl font-bold text-[#371d6a]">
+            <h1 className="text-3xl leading-16 lg:text-3xl leading-10 font-bold text-[#371d6a]">
               {t("Meta")}
             </h1>
             <p className="my-4 font-light leading-[32px] text-md">{t("p1")}</p>

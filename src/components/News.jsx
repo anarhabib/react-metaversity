@@ -61,7 +61,7 @@ const lang = i18n.language
                 key={id}
                 className={
                   index === current
-                    ? " opacity-1 transition-all duration-500 scale-100"
+                    ? " opacity-1 transition-all duration-700 scale-100"
                     : "absolute opacity-0 scale-0 transition-all duration-500 -z-50"
                 }
               >
