@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { scroller } from "react-scroll";
 
 
-const Footer = () => {
+const Footer = ({query}) => {
 const [sideBar, setSideBar] = useState(false);
 
 
@@ -39,7 +39,7 @@ const scrollToPage = async (target) => {
 
   return (
     <>
-      <div className="bg-white flex justify-between items-center -z-10">
+      <div className={query ? "hidden bg-white  justify-between items-center -z-10" : "bg-white flex justify-between items-center -z-10"}>
         <div className="container mx-auto  lg:px-16 pt-20 w-full h-full flex-column lg:flex items-center justify-center lg:justify-between relative pb-24">
         
           <div className="w-full lg:w-[30%] flex justify-center lg:justify-start items-center">

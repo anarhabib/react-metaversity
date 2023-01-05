@@ -30,12 +30,13 @@ const ModalBox = () => {
       </div>
 
       <Modal
+      
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box className=" bg-white absolute top-[50%] left-[50%] w-[80%] p-6 lg:w-[50%] sm:scale-[.7] lg:scale-[1] rounded-2xl transform -translate-x-1/2 -translate-y-1/2 flex-column items-center justify-center">
+        <Box className="bg-white absolute top-[50%] left-[50%] w-[80%] p-6 lg:w-[50%] sm:scale-[.7] lg:scale-[1] rounded-2xl transform -translate-x-1/2 -translate-y-1/2 flex-column items-center justify-center">
           <div className="w-full flex justify-end items-center">
             <AiOutlineClose
               size={30}

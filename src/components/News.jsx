@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import i18n from 'i18next';
 
 
-const News = () => {
+const News = ({query}) => {
 
 const lang = i18n.language
 
@@ -51,7 +51,7 @@ const lang = i18n.language
 
   return (
     <>
-      <div className="flex items-center justify-center w-full h-[370px] xl:h-[200px] p-8 bg-gradient-to-b from-[#28154d] to-[#6011ff] text-white text-center rounded rounded-bl-[100px] rounded-br-[100px] lg:rounded-br-[0px] shadow-2xl -z-50">
+      <div className={query ? "hidden items-center justify-center w-full h-[370px] xl:h-[200px] p-8 bg-gradient-to-b from-[#28154d] to-[#6011ff] text-white text-center rounded rounded-bl-[100px] rounded-br-[100px] lg:rounded-br-[0px] shadow-2xl -z-50" : "flex items-center justify-center w-full h-[370px] xl:h-[200px] p-8 bg-gradient-to-b from-[#28154d] to-[#6011ff] text-white text-center rounded rounded-bl-[100px] rounded-br-[100px] lg:rounded-br-[0px] shadow-2xl -z-50"}>
         <div className="container mx-auto lg:px-16 flex-row items-center justify-center relative">
           {data.map((carouselData, index) => {
             const { description, descriptionEn, id } = carouselData;

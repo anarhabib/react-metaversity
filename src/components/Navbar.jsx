@@ -11,7 +11,7 @@ import i18n from "../i18n";
 import { scroller } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
-const Navbar = () => {
+const Navbar = ({onQuery}) => {
   const [gifLoading, setGifLoading] = useState(true);
   const [dropdown, setDropdown] = useState(false);
   const [sideBar, setSideBar] = useState(false);
@@ -39,6 +39,7 @@ const Navbar = () => {
 
   if(sideBar){
     document.body.style.overflow = 'hidden'
+    // document.getElementsByClassName('contact-page').style.opacity = '0'
   }else{
     document.body.style.overflow = 'scroll'
 
@@ -73,6 +74,7 @@ const Navbar = () => {
 
   const handleSideBar = () => {
     setSideBar(!sideBar ? true : false);
+    onQuery(!sideBar ? true : false)
     // console.log(sideBar);
   };
 
@@ -175,11 +177,11 @@ const Navbar = () => {
         <div
           className={
             sideBar
-              ? " py-7 block  bg-white w-full h-[100vh] absolute left-0 top-0 text-black flex-row  items-center justify-center text-xl z-[100] overflow-y-scroll"
-              : " bg-black  w-full text-white flex-row items-center justify-center text-3xl hidden z-[100]"
+              ? " py-7 block  bg-white w-full h-[100vh] absolute left-0 top-0 text-black flex-row  items-center justify-center text-xl z-[10000] overflow-y-scroll"
+              : " bg-black  w-full text-white flex-row items-center justify-center text-3xl hidden z-[1000]"
           }
         >
-          <div className="flex items-center justify-between container mx-auto px-4">
+          <div className="flex items-center justify-between container mx-auto px-4 z-[100]">
             <Link
               to="/"
               onClick={(e) => {
@@ -196,7 +198,7 @@ const Navbar = () => {
             onClick={(e) => {
               setSideBar(!sideBar);
             }}
-            className=" my-10 flex items-center justify-center"
+            className="my-10 flex items-center justify-center"
           >
             <AZ
               onClick={changeLang("az")}

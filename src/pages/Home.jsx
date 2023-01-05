@@ -10,11 +10,11 @@ import Communuty from '../components/Communuty'
 import { FloatButton } from 'antd';
 
 
-const Home = () => {
+const Home = ({query}) => {
   return (
     <>
      <FutureTechnology/>
-     <News/>
+     <News query = {query}/>
      <Communuty/>
      <Blocks/>
      <Vision/>

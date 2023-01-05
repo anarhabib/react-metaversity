@@ -3,38 +3,41 @@ import Box from "@mui/material/Box";
 import { Input } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 
-const Contact = () => {
+const Contact = ({query}) => {
   const { t } = useTranslation();
+  
 
   return (
     <>
-    <div className='container lg:p-16 p-4 py-24 lg:py-36 mx-auto flex-column lg:flex items-center justify-center w-full'>
-    <Box className=" bg-white w-full h-full p-6 rounded-2xl  flex-column items-center justify-center">
+    <div className='contact-page container lg:p-16 p-4 py-24 lg:py-36 mx-auto flex-column lg:flex items-center justify-center w-full'>
+    <Box className={query ? "hidden bg-white w-full h-full p-6 rounded-2xl  flex-column items-center justify-center " : "bg-white w-full h-full p-6 rounded-2xl  flex-column items-center justify-center "}>
           <h1 className="text-2xl lg:text-3xl text-center my-8">
-            Hardan başlayacağınızdan əmin deyilsiniz?
+          {t("modalh")}
           </h1>
           <p className="font-light text-center">
-            Konsultasiya üçün müraciət edin
+          {t("modalp")}
           </p>
           <div className="flex-column justify-center items-center text-center">
             <Input
-              className="w-full my-8 "
+              className="w-full my-8 z-[100]"
               type="text"
               color={"secondary"}
-              placeholder="Ad"
+              placeholder={t("name")}
               required
             />
             <Input
-              className="w-full my-8 "
+              className="w-full my-8"
               type="text"
               color={"secondary"}
-              placeholder="Soyad"
+              placeholder={t("surname")}
+
             />
             <Input
               className="w-full my-8 text-xl "
               type="tel"
               color={"secondary"}
-              placeholder="Telefon nömrəsi"
+              placeholder={t("phone")}
+
             />
             <Input
               className="w-full my-8 text-xl "
@@ -45,13 +48,13 @@ const Contact = () => {
 
             <div className="flex-column justify-center items-center">
               <input type="checkbox" />
-              <span>Abonə olun !</span>
+              <span>{t("subscribe")}</span>
             </div>
             <button
               className="bg-[#28154d] text-white text-xl lg:text-2xl w-full p-4 rounded-2xl my-4 lg:my-8"
               id="submit"
             >
-              Müraciət et
+              {t("apply")}
             </button>
           </div>
         </Box>
