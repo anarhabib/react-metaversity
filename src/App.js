@@ -12,7 +12,7 @@ import { useState } from 'react'
 
 
 function App() {
-  const [query , setQuery] = useState('')
+  const [query , setQuery] = useState(false)
   return (
     <>
     <Navbar onQuery = {setQuery}/>

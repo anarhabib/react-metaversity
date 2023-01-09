@@ -21,7 +21,7 @@ const Navbar = ({onQuery}) => {
   const location = useLocation();
   const navigate = useNavigate()
 
-  const scrollTarget = (target) => scroller.scrollTo(target, {smooth: true, duration: 700 ,offset: -180});
+  const scrollTarget = (target) => scroller.scrollTo(target, {smooth: true, duration: 700 ,offset: 180});
 
   const scrollToPage = async (target) => {
     if (location.pathname !=='/') {
@@ -34,6 +34,9 @@ const Navbar = ({onQuery}) => {
     }else{
       return
     }
+    setSideBar(!sideBar ? true : false);
+    onQuery(!sideBar ? true : false)
+ 
     
 }; 
 
@@ -75,8 +78,10 @@ const Navbar = ({onQuery}) => {
   const handleSideBar = () => {
     setSideBar(!sideBar ? true : false);
     onQuery(!sideBar ? true : false)
-    // console.log(sideBar);
+ 
   };
+
+ 
 
   // console.log(sideBar);
 
@@ -89,6 +94,8 @@ const Navbar = ({onQuery}) => {
   const changeLang = (lang) => {
     return () => {
       i18n.changeLanguage(lang);
+      setSideBar(!sideBar ? true : false);
+      onQuery(!sideBar ? true : false)
     };
   };
 
@@ -184,9 +191,7 @@ const Navbar = ({onQuery}) => {
           <div className="flex items-center justify-between container mx-auto px-4 z-[100]">
             <Link
               to="/"
-              onClick={(e) => {
-                setSideBar(!sideBar);
-              }}
+            onClick={handleSideBar}
             >
               <img src={logo} alt="/" className="w-[150px]" />
             </Link>
@@ -245,9 +250,7 @@ const Navbar = ({onQuery}) => {
               >
                 <Link
                   to="web3"
-                  onClick={(e) => {
-                    setSideBar(!sideBar);
-                  }}
+                  onClick={handleSideBar}
                 >
                   <li className="flex items-center justify-center my-4 text-[#1361a7]">
                   {t("web3dr1")}
@@ -255,9 +258,7 @@ const Navbar = ({onQuery}) => {
                 </Link>
                 <Link
                   to="usedfor"
-                  onClick={(e) => {
-                    setSideBar(!sideBar);
-                  }}
+                  onClick={handleSideBar}
                 >
                   <li className="flex items-center justify-center my-4 text-[#1361a7]">
                   {t("web3dr2")}
@@ -265,9 +266,7 @@ const Navbar = ({onQuery}) => {
                 </Link>
                 <Link
                   to="metaverse"
-                  onClick={(e) => {
-                    setSideBar(!sideBar);
-                  }}
+                  onClick={handleSideBar}
                 >
                   <li className="flex items-center justify-center my-4 text-[#1361a7]">
                     Metaverse
@@ -295,9 +294,7 @@ const Navbar = ({onQuery}) => {
               >
                 <Link
                   to="acep"
-                  onClick={(e) => {
-                    setSideBar(!sideBar);
-                  }}
+                  onClick={handleSideBar}
                 >
                   <li className="flex items-center justify-center my-4 text-[#1361a7]">
                     A.C.E.P
@@ -308,9 +305,7 @@ const Navbar = ({onQuery}) => {
 
             <Link
               to="contact"
-              onClick={(e) => {
-                setSideBar(!sideBar);
-              }}
+              onClick={handleSideBar}
             >
               <li className="cursor-pointer my-8 flex justify-center items-center">
               {t("contact")}
